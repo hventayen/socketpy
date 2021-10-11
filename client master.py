@@ -25,11 +25,11 @@ def my_client():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:        # define socket TCP
         s.connect((HOST, PORT))
 
-        # my = input("Enter command ")
-        my_inp = 'Data'
+        my = input("Enter command ")
+        # my_inp = 'Data'
 
         # encode the message
-        my_inp = my.enc ode('utf-8')
+        my_inp = my.encode('utf-8')
 
         # send request ti server
         s.sendall(my_inp)
